@@ -1,0 +1,242 @@
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner .bg {
+    width: 100%;
+    z-index: 0;
+}
+
+.banner .icons {
+    width: 25px;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(117deg) brightness(107%) contrast(101%);
+  }
+
+.banner .icons:hover {
+    filter: invert(0%) sepia(86%) saturate(7445%) hue-rotate(145deg) brightness(109%) contrast(91%);
+}
+
+.banner .links {
+    position: absolute;
+    top: 5%;
+    right: 2.5%;
+}
+
+.banner .caleb {
+    width: 30%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255);
+    top: 38%;
+    left: 50%;
+}
+
+.banner .name {
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 75%;
+    left: 50%;
+    font-size: 48px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 26px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
+/* .about-text {
+    height: 400px; 
+    width: 50%;
+    padding-left: 2.5%;
+    float: left;
+} */
+
+/* .about-image {
+    margin-left: 5%;
+    width: 40%;
+    float: right;
+}
+
+.about-image .ai-image {
+    width: 80%;
+} */
+
+/* .about-text {
+    position: absolute;
+    margin: 40%;
+    padding-left: 2.5%;
+} */
+
+h1 {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    
+}
+
+h2 {
+    color: #d3c1ab;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    
+}
+
+p {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1680px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .content-container {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "about experience"
+            "ai-gif projects";
+        height: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .content-container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "about"
+            "experience"
+            "projects"
+            "ai-gif";
+        height: 50%;
+    }
+}
+
+.about { 
+    grid-area: about; 
+    padding-left: 2.5%;
+}
+
+.ai-gif {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.6fr 0.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "ai-brain"
+        "gif-description"; 
+    grid-area: ai-gif; 
+}
+
+.ai-brain {
+    padding-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-color: white;
+}
+
+.image-description {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.projects { 
+    grid-area: projects; 
+}
+
+.experience {
+    display: grid; 
+    gap: 0px 0px; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas: 
+      "exp_header"
+      "coop"; 
+    grid-area: experience;
+
+}
+
+.exp_header{
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    
+    grid-area: exp_header;
+}
+
+.coop {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "work_exp"; 
+    grid-area: coop; 
+}
+
+.pic { grid-area: pic; }
+
+.work_exp {
+    display: grid;
+    grid-template-columns: 0.3fr 0.9fr 0.8fr;
+    gap: 0px 0px;  
+    grid-template-areas: 
+      ". . .";
+    grid-area: work_exp; 
+    align-items: center;
+}
+
+.work_icon { 
+    width: 60%;
+}
+
+.company_name {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.work_title {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.text-link {
+    color: #d3c1ab;
+}
